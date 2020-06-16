@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Viljaladu.Models.Auto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.autoNr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sisenemisMass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lahkumisMass)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.autoNr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sisenemisMass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lahkumisMass)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

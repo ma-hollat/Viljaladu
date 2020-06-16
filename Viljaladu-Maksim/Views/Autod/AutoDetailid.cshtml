@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Viljaladu.Models.Auto>
+@{
+    ViewBag.mass = TempData["var"];
+}
+
+<h2>Auto Detailid</h2>
+
+<div>
+    <hr />
+    <h5>Toodud vilja kogus: @ViewBag.mass kg.</h5>
+
+</div>
+<p>
+    @Html.ActionLink("Back", "IndexAutod")
+</p>
